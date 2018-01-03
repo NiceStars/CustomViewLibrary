@@ -19,9 +19,21 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def apk = output.outputFile
+                    if (apk != null && apk.name.endsWith('.apk')) {
+                        def fileName = "Customview_${defaultConfig.versionName}.apk"
+                        output.outputFile = new File(apk.parent + "/package", fileName)
+                    }
+                }
+            }
         }
     }
 }
+
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
