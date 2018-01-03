@@ -25,7 +25,7 @@ android {
                     def apk = output.outputFile
                     if (apk != null && apk.name.endsWith('.apk')) {
                         def fileName = "Customview_${defaultConfig.versionName}.apk"
-                        output.outputFile = new File(apk.parent + "/package", fileName)
+                        output.outputFile = new File("/Users/nicestars/Desktop/Git", fileName)
                     }
                 }
             }
