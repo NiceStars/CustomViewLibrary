@@ -4,9 +4,10 @@
     android:layout_height="match_parent">
 
 
-    <com.view.PaintAPI
+    <com.view.DWClockView
         android:id="@+id/dw_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
